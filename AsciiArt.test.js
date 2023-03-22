@@ -115,4 +115,7 @@ const testing = [
   },
 ]
 
-testing.map(e => test(e.test_name, () => expect(AsciiArt(e.width,e.height,e.test_input,e.alphabets)).toBe(e.expect.join('\n'))))
+testing.map(e => {
+  console.log(AsciiArt(e.width,e.height,e.test_input,e.alphabets))
+  test(e.test_name, () => expect(AsciiArt(e.width,e.height,e.test_input,e.alphabets)).toBe(e.expect.join('\n')))  
+})
